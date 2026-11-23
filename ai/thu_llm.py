@@ -7,6 +7,8 @@ import time
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+sys.stdout.reconfigure(encoding='utf-8')
+
 MO_HINH = 'Qwen/Qwen2.5-0.5B-Instruct'
 
 

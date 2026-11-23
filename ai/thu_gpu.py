@@ -1,12 +1,15 @@
 # Nguyễn Tâm Bình - 2324801030003
 # Thử máy chủ AI: thông tin GPU, tốc độ nhân ma trận (có khởi động trước), huấn luyện CNN trên MNIST bằng GPU so với CPU
 # Dùng trong máy chủ AI: /opt/ai/bin/python thu_gpu.py
+import sys
 import time
 
 import torch
 from torch import nn
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
+
+sys.stdout.reconfigure(encoding='utf-8')
 
 
 def matmul(device, dtype, n, lap):
