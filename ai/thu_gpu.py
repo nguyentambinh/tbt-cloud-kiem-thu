@@ -80,7 +80,7 @@ def main():
     print(f'\nHuấn luyện CNN 1 epoch trên GPU: {gpu_s:.1f} s, độ chính xác tập kiểm tra {gpu_acc * 100:.2f}%')
     cpu_s, _ = train('cpu', train_set, test_set, gioi_han=40)
     cpu_epoch = cpu_s / 40 * len(DataLoader(train_set, batch_size=256))
-    print(f'Cùng mô hình trên CPU (40 batch, ước cho 1 epoch): {cpu_epoch:.1f} s, GPU nhanh hơn khoảng {cpu_epoch / gpu_s:.0f} lần')
+    print(f'Cùng mô hình trên CPU (40 batch, ước cho 1 epoch): {cpu_epoch:.1f} s, GPU nhanh hơn khoảng {cpu_epoch / gpu_s:.1f} lần')
     print(f'VRAM dùng nhiều nhất: {torch.cuda.max_memory_allocated() / 1024 ** 2:.0f} MB')
 
 
